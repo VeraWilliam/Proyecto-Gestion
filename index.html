@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Monitor de Sensores Arduino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <h1 class="text-5xl font-bold text-center mb-8 mt-5 text-gray-800">
+        Monitor de Sensores <span class="text-[#629677]">Arduino.</span>
+    </h1>
+
+    <div class="columns-3 flex justify-center space-x-10 text-center">
+        <!-- TEMPERATURA CARD -->
+        <div class="bg-white rounded-lg w-80 h-96 flex flex-col items-center justify-center shadow-lg hover:scale-105 transition duration-150">
+            <!-- TITULO -->
+            <div class="text-[#629677] font-semibold text-center text-4xl mb-8 h-16 flex items-center justify-center">Temperatura °C</div>
+            <!-- CIRCULO -->
+            <div class="circle bg-gray-50 rounded-full w-40 h-40 flex items-center justify-center shadow-lg">
+                <!-- NUMERO -->
+                <div id="temperature" class="sensor-data text-[#629677] font-semibold text-6xl text-center flex items-center justify-center">00</div>
+            </div>
+        </div>
+
+        <!-- HUMEDAD CARD -->
+        <div class="bg-white rounded-lg w-80 h-96 flex flex-col items-center justify-center shadow-lg hover:scale-105 transition duration-150">
+            <!-- TITULO -->
+            <div class="text-[#629677] font-semibold text-center text-4xl mb-8 h-16 flex items-center justify-center">Humedad %</div>
+            <!-- CIRCULO -->
+            <div class="circle bg-gray-50 rounded-full w-40 h-40 flex items-center justify-center shadow-lg">
+                <!-- NUMERO -->
+                <div id="humidity" class="sensor-data text-[#629677] font-semibold text-6xl text-center flex items-center justify-center">00</div>
+            </div>
+        </div>
+        <!-- HUMEDAD SUELO PLANTA CARD -->
+        <div class="bg-white rounded-lg w-80 h-96 flex flex-col items-center justify-center shadow-lg hover:scale-105 transition duration-150">
+            <!-- TITULO -->
+            <div class="text-[#629677] font-semibold text-center text-4xl mb-8 h-16 flex items-center justify-center">Humedad del Suelo</div>
+            <!-- CIRCULO -->
+            <div class="circle bg-gray-50 rounded-full w-40 h-40 flex items-center justify-center shadow-lg">
+                <!-- NUMERO -->
+                <div id="soil-moisture" class="sensor-data text-[#629677] font-semibold text-6xl text-center flex items-center justify-center">00</div>
+            </div>
+        </div>
+    </div>
+    <!-- BOTON -->
+    <div class="mt-10 flex justify-center">
+        <button id="connectButton" class="bg-[#629677] rounded-lg h-12 w-56 shadow-lg hover:bg-[#486E57] transform hover:scale-105 transition duration-150">
+            <a href="" class="text-white font-semibold text-xl">Conectar Arduino</a>
+        </button>
+        
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
